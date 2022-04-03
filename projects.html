@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+
+    <!--NAVBAR-->
+    <div class="nav-container" id="nav-bar">
+        <nav>
+            <a href="index.html"><h1>Tony Qiu</h1></a>
+            <div class="nav-right">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="About.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </div>  
+
+    <!-- Placeholder -->
+    <div class="placeholder"></div>
+
+    <!-- PROJECTS -->
+    <section class="projects">
+        <h1>Projects</h1>
+
+        <div class="project">
+            <div class="project-img">
+                <img src="https://cdn.discordapp.com/attachments/715319623637270638/958546450416013382/61f73e1443ef1dde02c175f1_Autotrader20Case20Study.png"/>
+            </div>
+            <div class="project-text">
+                <h1>Autotrader</h1>
+                <p>Cox Automotive Australia (Part of the Cox family, a Fortune 500 company) approached Mizko Media to strategise, design and re-define the way Australians buy and sell cars. The goal was simple, we wanted to introduce a new experience that was seamless, smart and also engineered for growth.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-img">
+                <img src="https://uploads-ssl.webflow.com/61ef53b38ff5acac3977a683/61f73e22a3a1b8981edd783c_Devery%20Case%20Study-p-800.jpeg"/>
+            </div>
+            <div class="project-text">
+                <h1>Devery</h1>
+                <p>Track and verify your products. A decentralised protocol for developers to integrate blockchain verification technology. Project designed in collaboration with the World Health Organisation.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-img">
+                <img src="https://uploads-ssl.webflow.com/61ef53b38ff5acac3977a683/61f71ce3c6a3ac347e57a294_Designership%20Case%20Study.jpg"/>
+            </div>
+            <div class="project-text">
+                <h1>Designership</h1>
+                <p>Designership is the one-stop shop to master the world of UX/UI design. Immerse yourself in real-world courses, products and an exclusive global community.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-img">
+                <img src="https://uploads-ssl.webflow.com/61ef53b38ff5acac3977a683/61f71ce35259c0e6ee72a966_OkTY%20Case%20Study.jpg"/>
+            </div>
+            <div class="project-text">
+                <h1>Zipmex</h1>
+                <p>Zipmex seeks to educate, excite, and enrich everyday people with new financial possibilities on its innovative, secure, and fully-regulated digital assets platform. The innovative approach to finance seeks to leverage blockchain across SEA to enable customers to invest, save, spend like never before.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-img">
+                <img src="https://uploads-ssl.webflow.com/61ef53b38ff5acac3977a683/61f71ce3e6ce5edc4002214f_Blinker%20Case%20Study.jpg"/>
+            </div>
+            <div class="project-text">
+                <h1>Interviewer Space</h1>
+                <p>Interviewer.space is a SaaS platform that helps interviewers and hiring managers to standardise interviews, collaborate and effectively assess candidates to make a confident hiring decision.</p>
+            </div>
+        </div>
+
+    </section>
+    
+    <script src="script.js"></script>
+    <script>
+
+        const projects = document.querySelector('.projects')
+        if (IsInView(projects)){
+            projects.style.opacity = '1'
+            projects.style.transform = 'unset'
+            projects.style.filter = 'unset'
+        }
+
+    </script>
+
+</body>
+</html>
