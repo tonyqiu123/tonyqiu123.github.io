@@ -165,7 +165,7 @@ nav > a > h1 {
     right: -9999px;
     margin: auto;
     transform: perspective(500px) translateZ(-5000px);
-    animation: hero-fade 2s 2.1s forwards;
+    animation: hero-fade 2s 2.5s forwards;
     opacity: 0;
     z-index: -1;
 }
