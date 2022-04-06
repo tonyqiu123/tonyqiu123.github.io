@@ -1,19 +1,8 @@
 
-// IsInView FUNCTION, root
-const r = document.querySelector(':root')
 // HERO: H1
-const hero_text_h1 = document.querySelector('.hero-text h1');
+const hero_text_h1 = document.querySelector('.hero-text h1')
 hero_text_h1.innerHTML = hero_text_h1.innerHTML.replace(/./g, "<span>$&</span>")
-
-const hero_text_h1_span = document.querySelectorAll('.hero-text > h1 span')
-hero_text_h1_span.forEach((letter, index) => {
-    setTimeout(() => {
-    letter.style.transform = "unset";
-    if (index > 7) {
-        letter.style.color = "var(--signatureGreen)"
-    }
-    }, (index+5)*35);
-})
+characterEffect(document.querySelectorAll('.hero-text > h1 span'))
 
 // HERO: INTRO
 const hero = document.querySelector('.hero');
@@ -30,11 +19,13 @@ setTimeout(() => {
 }, 1430);
 
 // SCROLL: ABOUT, STORY
-const about = document.querySelector('.about')
+// const about_h1 = document.querySelector('.about > h1')
+// about_h1.innerHTML = about_h1.innerHTML.replace(/./g, "<span>$&</span>")
 const story = document.querySelector('.story')
 const story_nodes = document.querySelectorAll('.story-segment-left > div')
 const story_segments = document.querySelectorAll('.story-segment')
 const story_h1 = document.querySelector('.story > h1')
+// story_h1.innerHTML = story_h1.innerHTML.replace(/./g, "<span>$&</span>")
 let storyVerticalJS
 window.addEventListener('scroll', () => {
     if (IsInView(story)) {
@@ -46,8 +37,8 @@ window.addEventListener('scroll', () => {
             storyVerticalJS + 155 + story.getBoundingClientRect().top > node.getBoundingClientRect().top ? story_segments[index].classList.add("activated") : story_segments[index].classList.remove("activated")
         })
     }
-    if (IsInView(about)) {
-        about.style.transform = 'unset'
-        about.style.opacity = '1'
-    }
+    // if (IsInView(about_h1))
+    //     characterEffect(document.querySelectorAll('.about > h1 span'))
+    // if (IsInView(story_h1))
+    //     characterEffect(document.querySelectorAll('.story > h1 span'))
 })

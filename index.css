@@ -29,11 +29,11 @@
 .hero-socials img:hover {
     opacity: 1;
 }
-.hero-text > h1 {
+.hero-text > h1{
     overflow: hidden;
     width: fit-content;
 }
-.hero-text > h1 > span {
+.hero-text > h1 > span{
     color: var(--white);
     display: inline-block;
     transform: translateY(100%);
@@ -99,9 +99,6 @@
     max-width: 1250px;
     margin: auto;
     padding: 50px 25px;
-    transition: transform 1.5s, opacity 2.5s;
-    transform: translateY(150px);
-    opacity: 0;
 }
 .about > img {
     width: 100%;
@@ -155,7 +152,7 @@
     transition: 0.4s;
 }
 .stat > img:hover {
-    transform: perspective(500px) translateZ(125px);
+    transform: perspective(500px) translateZ(100px);
     filter: grayscale(20%);
     transition: 0.3s ease;
 }
@@ -224,7 +221,8 @@
 }
 /* ACTIVATED NODE */
 .story-segment.activated > div > div {
-    box-shadow: 0 0 20px 1px white;
+    box-shadow: 0 0 20px 5px white;
+    transition: .2s;
 }
 .story-segment.activated h1 {
     transform: translateY(4px);
