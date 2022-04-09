@@ -1,4 +1,5 @@
 
+
 // HERO: H1
 const hero_text_h1 = document.querySelector('.hero-text h1')
 hero_text_h1.innerHTML = hero_text_h1.innerHTML.replace(/./g, "<span>$&</span>")
@@ -26,7 +27,7 @@ const story_nodes = document.querySelectorAll('.story-segment-left > div')
 const story_segments = document.querySelectorAll('.story-segment')
 const story_h1 = document.querySelector('.story > h1')
 // story_h1.innerHTML = story_h1.innerHTML.replace(/./g, "<span>$&</span>")
-let storyVerticalJS
+let storyVerticalJSos
 window.addEventListener('scroll', () => {
     if (IsInView(story)) {
         story.classList.add('in-view')
