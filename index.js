@@ -1,5 +1,8 @@
 
 
+
+
+
 // HERO: H1
 const hero_text_h1 = document.querySelector('.hero-text h1')
 hero_text_h1.innerHTML = hero_text_h1.innerHTML.replace(/./g, "<span>$&</span>")
@@ -43,3 +46,6 @@ window.addEventListener('scroll', () => {
     // if (IsInView(story_h1))
     //     characterEffect(document.querySelectorAll('.story > h1 span'))
 })
+
+const test = `${process.env.test}`
+console.log(test)
