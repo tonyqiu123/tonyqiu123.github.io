@@ -67,6 +67,7 @@ button:hover {
 }
 .secondary-button:hover {
     color: var(--signatureGreen);
+    filter: brightness(90%);
 }
 span {
     color: var(--signatureGreen);
