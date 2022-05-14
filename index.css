@@ -1,8 +1,5 @@
-
 /* HERO */
 .hero {
-    margin: auto;
-    max-width: 1250px;
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -17,7 +14,7 @@
     width: calc(3*35px);
     display: flex;
     justify-content: space-between;
-    animation: hero-fade 1s 2.25s forwards;
+    animation: hero-fade 1.25s 2.5s forwards;
     opacity: 0;
     margin-bottom: 10px;
 }
@@ -30,6 +27,7 @@
     opacity: 1;
 }
 .hero-text > h1{
+    font-size: 4.5rem;
     overflow: hidden;
     width: fit-content;
 }
@@ -40,9 +38,10 @@
     transition: transform .8s cubic-bezier(0,.91,.22,.94);
 }
 .hero-text > p {
-    margin: 10px 0 35px 0;
+    font-size: 1.5rem;
+    margin: 10px 0;
     opacity: 0;
-    animation: hero-fade 1s 2.5s forwards;
+    animation: hero-fade 1.25s 2.6s forwards;
 }
 @keyframes hero-fade {
     100% {
@@ -52,14 +51,18 @@
 }
 .hero-text > a {
     opacity: 0;
-    animation: hero-fade 1s 2.75s forwards;
+    animation: hero-fade 1.25s 2.8s forwards;
+}
+.hero-text > a > button {
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
 }
 .hero-image {
     position: relative;
 }
 .hero-image > div {
     border-radius: 50%;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-color: var(--signatureGreen);
     height: 450px;
     width: 450px;
     position: absolute;
@@ -68,13 +71,22 @@
     left: -9999px;
     right: -9999px;
     margin: auto;
-    transform: perspective(500px) translateZ(-5000px);
-    animation: hero-fade 2s 2.5s forwards;
+    transform: perspective(500px) translate3d(500px, -50px, 50px);
+    animation: hero-fade 1.75s 2.5s forwards;
     opacity: 0;
     z-index: -1;
 }
+@keyframes hero-bg-fade {
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: perspective(500px) translate3d(0, -50px, 50px)
+    }
+}
 .hero-image > img {
-    filter: brightness(85%);
+    filter: brightness(80%) saturate(0);
     width: 450px;
     position: absolute;
     top: -9999px;
@@ -83,40 +95,28 @@
     right: -9999px;
     margin: auto;
     border-radius: 0 0 225px 225px;
-    /* transform: perspective(500px) translateZ(200px); */
-    transform: perspective(500px) translate3d(0, -50px, 50px);
-    animation: hero-image-fade 2.5s 4s forwards;
+    transform: perspective(250px) translate3d(0, -50px, 50px);
+    animation: hero-image-fade 2s 4s forwards;
     opacity: 0;
 }
 @keyframes hero-image-fade {
+    85% {
+        opacity: 1;
+    }
     100% {
         opacity: 1;
         transform: perspective(500px) translate3d(0, -50px, 50px)
     }
 }
-/* ABOUT ME */
-.about {
-    max-width: 1250px;
-    margin: auto;
-    padding: 50px 25px;
-}
-.about > img {
-    width: 100%;
-    border-radius: 15px;
-    margin: 25px 0;
-}
-
 /* STATISTICS */
 .statistics {
-    max-width: 1200px;
     position: relative;
-    margin: auto;
     overflow: hidden;
     height: 200px;
     display: flex;
 }
 .statistics::before, .statistics::after {
-    background: linear-gradient(to right,  var(--darkBlue) 0%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(to right,  var(--black) 0%,rgba(255,255,255,0) 100%);
     content: "";
     width: 50px;
     height: 100%;
@@ -156,12 +156,46 @@
     filter: grayscale(20%);
     transition: 0.3s ease;
 }
+/* PROJECTS */
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+.project {
+    background-color: rgba(90, 169, 255, 0.167);
+    display: flex;
+    border-radius: 25px;
+    padding: 50px;
+    align-items: center;
+    gap: 50px;
+}
+.project-info > h1 {
+    margin-top: -20px;
+}
+.project-info > p {
+    margin: 1.25rem 0;
+    color: var(--grayTextOnDarkBg);
+}
+.project > img {
+    height: 350px;
+}
 
+
+
+
+/* ABOUT ME */
+.about {
+}
+.about > img {
+    width: 100%;
+    border-radius: 15px;
+    margin: 25px 0;
+}
 /* STORY */
 .story {
     padding: 50px 25px 100px 25px;
-    margin: auto;
-    max-width: 1250px;
     position: relative;
 }
 .story::before {
@@ -231,21 +265,4 @@
 .story-segment.activated p {
     transform: unset;
     opacity: 1;
-}
-/* LETS WORK */
-.lets-work {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 100px 25px;
-    text-align: center;
-    background-color: var(--transparentWhite);
-}
-.lets-work > h1 {
-    font-size: 3rem;
-}
-.lets-work > p {
-     margin: 20px 0 35px 0;
-     max-width: 600px;
 }

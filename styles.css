@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 body {
     overflow-x: hidden;
-    background: var(--darkBlue);
+    background: var(--black);
 }
 ::-webkit-scrollbar { 
      display: none; 
@@ -18,8 +18,11 @@ body {
     /* border: 1px solid blue; */
 }
 :root {
-    --signatureGreen: rgb(67, 185, 77);
+    --signatureGreen: rgb(125,211,252);
     --darkBlue: rgb(4, 12, 33);
+    --black: rgb(22,22,22);
+    --grayText: rgb(116,129,137);
+    --grayTextOnDarkBg: rgb(184, 197, 215);
     --white: rgb(236, 236, 236);
     --transparentWhite: rgba(255, 255, 255, 0.15);
     --storyVertical: 0px;
@@ -36,30 +39,42 @@ h1 {
 }
 p {
     line-height: 150%;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--grayText);
 }
 button {
-    padding: 1rem 2rem;
-    border-radius: 15px;
-    font-size: 1.25rem;
+    margin-top: 15px;
+    padding: .8rem 1.75rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
     border: 3px solid var(--signatureGreen);
     cursor: pointer;
-    transition: 0.4s;
+    transition: transform 0.4s;
     background: var(--signatureGreen);
-    box-shadow: 0 0 20px 2px var(--signatureGreen);
+    /* box-shadow: 0 0 15px 0px var(--signatureGreen); */
+    color: var(--black);
 }
 button:hover {
+    transition: transform 0.4s cubic-bezier(0,.91,.22,.94);
+    background-color: var(--black);
+    color: var(--signatureGreen);
     transform: perspective(500px) translateZ(50px);
 }
 span {
     color: var(--signatureGreen);
+}
+section {
+    padding: 50px 25px;
+    max-width: 1250px;
+    margin: auto;
+    width: 100%;
 }
 /* NAV */
 .nav-right > a:first-child {
     background: rgba(255, 255, 255, 0.15);
 }
 .nav-container{ 
-    background: var(--darkBlue);
+    background: var(--black);
     z-index: 99;
     width: 100%;
     height: 70px;
@@ -93,4 +108,68 @@ nav > a > h1 {
 }
 .nav-right > a:hover {
     background: var(--transparentWhite);
+}
+/* LETS WORK */
+.lets-work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.lets-work > h1 {
+    font-size: 2.5rem;
+}
+.lets-work > p {
+    max-width: 500px;
+    margin: 12px 0;
+}
+
+/* FOOTER */
+.footer {
+    border-top: 3px solid var(--signatureGreen);
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+}
+.footer-top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 1250px;
+    margin: auto;
+}
+.footer-top-category {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.footer-top-category > :first-child {
+    color: var(--white);
+    margin-bottom: 25px;
+}
+.footer-top-category > a > p:hover {
+    color: var(--white);
+}
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.footer-bottom > h1 {
+    font-size: 3rem;
+}
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+.footer-socials > a > img {
+    width: 1.5rem;
+    opacity: 0.4;
+    transition: .2s;
+}
+.footer-socials > a > img:hover {
+    opacity: 1;
 }
