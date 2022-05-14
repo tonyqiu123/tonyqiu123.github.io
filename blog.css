@@ -6,3 +6,68 @@
 .placeholder {
     height: 60px;
 }
+
+/* BLOG  */
+.blog {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.post {
+    width: 100%;
+    max-width: 900px;
+    background-color: rgb(38, 38, 40);
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform .3s;
+    gap: 50px;
+}
+.post:hover {
+    transform: perspective(500px) translateZ(15px);
+}
+.post-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.author-info {
+    display: flex;
+    gap: 15px;
+}
+.author-info > img {
+    height: 35px;
+    border-radius: 50%;
+}
+.author-info > p {
+    margin: auto 0;
+    font-size: 1rem;
+}
+.author-info > p:nth-child(3) {
+    font-style: italic;
+}
+.post-left > h1 {
+    font-size: 2.5rem;
+}
+.post-left > p {
+    color: var(--grayTextOnDarkBg);
+}
+.post-info {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+}
+.post-info > p {
+    font-size: 1rem;
+    border-radius: 25px;
+    color: var(--white);
+    background-color: var(--black);
+    padding: 5px 15px;
+    margin: auto 0;
+}
+.post > img {
+    height: 150px;
+    margin: auto;
+}
