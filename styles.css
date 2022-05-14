@@ -71,16 +71,18 @@ section {
 }
 /* NAV */
 .nav-container{ 
-    background: var(--black);
     z-index: 99;
     width: 100%;
-    height: 70px;
+    height: 60px;
     position: fixed;
     transition: 0.5s;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.457);
+    backdrop-filter: blur(7px);
 }
 nav {
     max-width: 1250px;
-    height: 70px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
