@@ -1,0 +1,8 @@
+.nav-right > a:nth-child(3) {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* placeholder */
+.placeholder {
+    height: 60px;
+}

@@ -46,6 +46,3 @@ window.addEventListener('scroll', () => {
     // if (IsInView(story_h1))
     //     characterEffect(document.querySelectorAll('.story > h1 span'))
 })
-
-const test = `${process.env.test}`
-console.log(test)
