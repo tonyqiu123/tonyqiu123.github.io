@@ -1,6 +1,6 @@
 .nav-right > a:first-child {
     background: rgba(255, 255, 255, 0.15);
-}
+} 
 /* HERO */
 .hero {
     height: 100vh;
@@ -52,13 +52,13 @@
         transform: unset;
     }
 }
-.hero-text > a {
+.hero-cta {
+    display: flex;
+    gap: 25px;
+}
+.hero-cta > a {
     opacity: 0;
     animation: hero-fade 1.25s 2.8s forwards;
-}
-.hero-text > a > button {
-    font-size: 1.25rem;
-    padding: 1rem 2rem;
 }
 .hero-image {
     position: relative;
