@@ -21,8 +21,9 @@ body {
     --signatureGreen: rgb(113, 208, 255);
     --darkBlue: rgb(4, 12, 33);
     --black: rgb(22,22,22);
+    --gray: rgb(38, 38, 40);
     --grayText: rgb(130, 144, 152);
-    --grayTextOnDarkBg: rgb(184, 197, 215);
+    --grayTextOnDarkBg: rgb(180, 187, 196);
     --white: rgb(236, 236, 236);
     --transparentWhite: rgba(255, 255, 255, 0.15);
     --storyVertical: 0px;
@@ -45,8 +46,8 @@ p {
 }
 button {
     margin: 15px 0;
-    padding: .8rem 1.75rem;
-    border-radius: 25px;
+    padding: .8rem 1.5rem;
+    border-radius: 5px;
     font-size: 1.1rem;
     border: 3px solid var(--signatureGreen);
     cursor: pointer;
@@ -63,10 +64,10 @@ button:hover {
 }
 .secondary-button {
     font-size: 1.25rem;
-    text-decoration: underline;
     cursor: pointer;
 }
 .secondary-button:hover {
+    text-decoration: underline;
     font-style: italic;
 }
 span {
@@ -78,6 +79,8 @@ section {
     margin: auto;
     width: 100%;
     align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 /* NAV */
 .nav-container{ 
@@ -120,9 +123,6 @@ nav > a > h1 {
 }
 /* LETS WORK */
 .lets-work {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
     text-align: center;
 }
@@ -141,6 +141,7 @@ nav > a > h1 {
     display: flex;
     flex-direction: column;
     gap: 75px;
+    margin-top: 70px;
 }
 .footer-top {
     display: flex;

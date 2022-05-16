@@ -6,9 +6,15 @@
     height: 60px;
 }
 /* PROJECTS */
+.header {
+    align-items: unset;
+    padding-bottom: 20px;
+}
+.header > p {
+    margin-top: 10px;
+    max-width: 650px;
+}
 .projects {
-    display: flex;
-    flex-direction: column;
     gap: 75px;
 }
 .project {
