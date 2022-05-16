@@ -18,7 +18,7 @@ heroIntro();
 window.addEventListener('resize', heroIntro)
 setTimeout(() => {
     window.removeEventListener('resize', heroIntro)
-    hero_text.style.transition = '.8s'
+    hero_text.style.transition = '.85s'
     hero_text.style.transform = 'unset'
 }, 1400);
 

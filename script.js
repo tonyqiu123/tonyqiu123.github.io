@@ -30,3 +30,7 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos
 }
 
+
+// on-load section fade-in effect
+var fadeInSection = document.getElementById('fade-in')
+fadeInSection.style.transform = 'unset'

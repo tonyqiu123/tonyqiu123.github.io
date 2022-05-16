@@ -73,7 +73,7 @@
     inset: -9999px;
     margin: auto;
     transform: perspective(500px) translate3d(500px, -50px, 50px);
-    animation: hero-fade 1.5s 2.25s forwards;
+    animation: hero-fade 1.5s 2.35s forwards;
     opacity: 0;
     z-index: -1;
 } 
@@ -97,7 +97,7 @@
     margin: auto;
     border-radius: 0 0 225px 225px;
     transform: perspective(250px) translate3d(0, -50px, 50px);
-    animation: hero-image-fade 2s 3.75s forwards;
+    animation: hero-image-fade 2s 3.85s forwards;
     opacity: 0;
 }
 @keyframes hero-image-fade {

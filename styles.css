@@ -82,11 +82,15 @@ section {
     display: flex;
     flex-direction: column;
 }
+#fade-in {
+    transition: all .7s cubic-bezier(0,.91,.22,.94);
+    transform: translateY(50px);
+}
 /* NAV */
 .nav-container{ 
     z-index: 99;
     width: 100%;
-    height: 60px;
+    height: 70px;
     position: fixed;
     transition: 0.5s;
     border-radius: 5px;
@@ -95,7 +99,7 @@ section {
 }
 nav {
     max-width: 1250px;
-    height: 60px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -109,7 +113,7 @@ nav > a > h1 {
     font-size: 1.5rem;
 }
 .nav-right {
-    width: calc(4*100px);
+    width: calc(4.5*100px);
     display: flex;
     justify-content: space-between;
 }
@@ -117,6 +121,10 @@ nav > a > h1 {
     transition: all 0.2s;
     border-radius: 25px;
     padding: 12px 20px;
+}
+.nav-right > a:last-child {
+    padding: 0;
+    background: none !important;
 }
 .nav-right > a:hover {
     background: var(--transparentWhite);
